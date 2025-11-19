@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Company Name</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      @media (max-width: 991px) {
+        .navbar .d-none.d-lg-block {
+          display: none !important;
+        }
+        .hamburger {
+          display: block !important;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .hamburger {
+          display: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="#about-section">About</a>
+      <a href="#Latest_News">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div
+      class="position-fixed bottom-0 end-0 mb-5 me-3 bd-mode-toggle"
+      style="z-index: 9999"
+    >
+      <a
+        href="#top-container"
+        class="btn btn-bd-primary py-2 d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        aria-label="Toggle theme (dark)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-chevron-double-up"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.646 2.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 3.707 2.354 9.354a.5.5 0 1 1-.708-.708z"
+          ></path>
+          <path
+            fill-rule="evenodd"
+            d="M7.646 6.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 7.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"
+          ></path>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Nav Bar -->
+    <header class="navbar px-5">
+      <div>
+        <a
+          href="/"
+          class="d-flex align-items-center justify-content-center text-decoration-none"
+        >
+          <img src="./Assets/app.svg" alt="logo" class="px-2" />
+          <span class="name_text">Company Logo</span>
+        </a>
+      </div>
+      <div class="d-none d-lg-block">
+        <ul class="nav nav-pills">
+          <li  class="nav-item"><a href="#" class="nav-link text-white">Home</a></li>
+          <li class="nav-item">
+            <a href="#about-section" class="nav-link text-white">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="#Latest_News" class="nav-link text-white">News</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link text-white">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-lg-none">
+        <a href="javascript:void(0)" onclick="openNav()">
+          <img
+            class="hamburger"
+            src="./Assets/hamburger-menu-icon.svg"
+            alt="menu"
+          />
+        </a>
+      </div>
+    </header>
+
+    <!-- First section -->
+
+    <div
+      id="top-container"
+      class="top-container col-sm-12 align-items-center py-5"
+    >
+      <div class="title-container col-md-12 px-5">
+        <h1 class="title-heading display-5 fw-bold px-5">
+          Welcome to <br />
+          <span>Our company...</span>
+        </h1>
+      </div>
+      <div class="col-sm-12 px-5">
+        <p class="lead col-md-6 col-sm-12 px-5">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id nibh
+          sit amet nisl congue pharetra a semper tellus. Pellentesque.
+        </p>
+      </div>
+    </div>
+
+    <!-- about-section -->
+
+    <div id="about-section" class="about-section px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold">About Us</h1>
+        <hr />
+        <div class="col-lg-6 mx-auto">
+          <p class="fs-5 mb-4 text-black">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel
+            malesuada risus. Integer in lectus ac neque condimentum porttitor
+            porttitor ac eros. Vivamus laoreet mi facilisis ultricies tincidunt.
+            Cras imperdiet risus at ante sagittis, sed ullamcorper purus
+            accumsan. Aliquam fermentum ligula mauris, feugiat elementum nisl
+            vulputate ut. Vivamus condimentum quam.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Latest_News -->
+
+    <div
+      id="Latest_News"
+      class="Latest-news text-secondary col-xxl-12 px-4 py-5 text-center"
+    >
+      <div class="slides col-xxl-8 py-5">
+        <h1 class="display-5 fw-bold">Latest News</h1>
+        <hr />
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper" id="news-slides">
+            <!-- Slides will be inserted here -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial -->
+
+    <div id="carousel" class="carousel slide mb-6" data-bs-ride="carousel">
+      <div class="carousel-inner"></div>
+
+      <a
+        class="carousel-control-prev"
+        href="#carousel"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <img
+          src="./Assets/left-w-icon.svg"
+          alt="Previous"
+          style="width: 40px; height: 40px"
+        />
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#carousel"
+        role="button"
+        data-bs-slide="next"
+      >
+        <img
+          src="./Assets/right-w-icon.svg"
+          alt="Next"
+          style="width: 40px; height: 40px"
+        />
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <!-- contact Us -->
+    <div id="contact" class="contact-us text-center">
+      <h1 class="display-5 fw-bold">Contact Us</h1>
+      <hr />
+      <div id="map" style="width: 100%; height: 600px">
+        <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d454.01581827659874!2d79.97862023751016!3d6.907080478109067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae257c0d624a71f%3A0x56bafab6643548a6!2sVinseth%20Homes!5e0!3m2!1sen!2slk!4v1763574573183!5m2!1sen!2slk"
+  width="100%"
+  height="600px"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen>
+</iframe>
+
+      </div>
+    </div>
+    <!-- Footer -->
+
+    <div class="footer">
+      <footer>
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between mx-5"
+        >
+          <div class="col-md-6 col-xs-12 d-flex flex-md-row flex-column">
+            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
+              <h5
+                class="d-flex align-items-center justify-content-center justify-content-md-start"
+              >
+                <img src="./Assets/app.svg" class="px-2" alt="" />
+                Company Logo
+              </h5>
+            </div>
+            <div class="col-12 col-md-6 text-center text-md-start mb-3">
+              <p>
+                No:111/G/7, <br />
+
+                5 Lane, hunandahena Road, <br />
+
+                ahanthota, Malambe,<br />
+                Sri Lanka.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end mb-3">
+            <h5>Stay Connected with Us</h5>
+            <ul
+              class="list-unstyled d-flex justify-content-center justify-content-md-end mt-2"
+            >
+              <li class="">
+                <a href="#"
+                  ><img
+                    class="smimg"
+                    src="./Assets/facebook.svg"
+                    alt="Facebook"
+                /></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"
+                  ><img class="smimg" src="./Assets/twitter.svg" alt="Twitter"
+                /></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"
+                  ><img class="smimg" src="./Assets/insta.svg" alt="Instagram"
+                /></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"
+                  ><img
+                    class="smimg"
+                    src="./Assets/linkedin.svg"
+                    alt="LinkedIn"
+                /></a>
+              </li>
+              <li class="ms-3">
+                <a href="#"
+                  ><img class="smimg" src="./Assets/youtube.svg" alt="YouTube"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-sm-column flex-md-row col-md-12 justify-content-between px-5"
+        >
+          <div class="col-12 col-md-6 text-center text-md-start">
+            <p>© <span id="year"></span> Company, Inc. All rights reserved.</p>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-end">
+            <p>Published: November 2025</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div
+      class="modal fade"
+      id="newsModal"
+      tabindex="-1"
+      aria-labelledby="newsModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModalLabel">News Title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="newsModalImage"
+              src=""
+              alt="News Image"
+              class="img-fluid mb-3"
+            />
+            <p id="newsModalContent"></p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const topContainer = document.getElementById("top-container");
+    const backToTopBtn = document.querySelector(".bd-mode-toggle");
+
+    window.addEventListener("scroll", () => {
+      const topContainerHeight = topContainer.offsetHeight;
+
+      if (window.scrollY > topContainerHeight) {
+        backToTopBtn.classList.add("show");
+      } else {
+        backToTopBtn.classList.remove("show");
+      }
+    });
+  </script>
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+
+  <script>
+    async function loadTestimonial() {
+      try {
+        const response = await axios.get("http://localhost:3001/testimonial");
+        const testimonial = response.data;
+
+        const testimonialsiner = document.querySelector(".carousel-inner");
+        testimonialsiner.innerHTML = testimonial
+          .map(
+            (item, index) => `
+            <div class="carousel-item ${index === 0 ? "active" : ""}">
+          <div class="container h-100">
+            <div
+              class="carousel-caption d-flex flex-column justify-content-center align-items-center h-100"
+            >
+              <img
+                src="./Assets/quote-right-Icon.svg"
+                alt=""
+                style="width: 20px; height: 20px"
+                class="align-self-end mb-2"
+              />
+              <p class="opacity-75 text-center px-5">
+                ${item.content}
+              </p>
+              <img
+                src="./Assets/quote-left-Icon.svg"
+                alt=""
+                style="width: 20px; height: 20px"
+                class="align-self-start mt-2"
+              />
+              <h4 class="text-center mt-3">${item.name}</h4>
+              <p class="text-center">${item.designation}</p>
+            </div>
+          </div>
+        </div>
+          `
+          )
+          .join("");
+      } catch (err) {
+        console.error("Failed to load Testimonial:", err);
+        testimonialsiner.innerHTML =
+          '<p class="text-danger">Failed to load Testimonial.</p>';
+      }
+    }
+    loadTestimonial();
+  </script>
+  <script>
+    let swiper; // global Swiper instance
+
+    async function loadNews() {
+      try {
+        const response = await axios.get("http://localhost:3001/news");
+        const news = response.data;
+
+        const slidesContainer = document.getElementById("news-slides");
+
+        // Create slides HTML
+        slidesContainer.innerHTML = news
+          .map(
+            (item) => `
+  <div class="swiper-slide">
+    <div class="swipe-img">
+      <img src="${item.image_url}" alt="News Image" />
+    </div>
+    <div class="swipe-text">
+      <p>${item.content}</p>
+      <button class="btn read-more float-end" 
+        data-id="${item.id}" 
+        data-title="News #${item.id}" 
+        data-image="${item.image_url}" 
+        data-content="${item.content}">
+        Read >
+      </button>
+    </div>
+  </div>
+`
+          )
+          .join("");
+
+        if (swiper) swiper.destroy(true, true);
+
+        // Initialize Swiper
+        swiper = new Swiper(".mySwiper", {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            240: { slidesPerView: 1, spaceBetween: 20 },
+            480: { slidesPerView: 2, spaceBetween: 20 },
+            768: { slidesPerView: 3, spaceBetween: 40 },
+            1024: { slidesPerView: 3, spaceBetween: 50 },
+          },
+        });
+      } catch (err) {
+        console.error("Failed to load news:", err);
+        slidesContainer.innerHTML =
+          '<p class="text-danger">Failed to load news.</p>';
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", loadNews);
+    document.addEventListener("click", function (e) {
+      if (e.target && e.target.classList.contains("read-more")) {
+        const btn = e.target;
+
+        const title = btn.dataset.title;
+        const content = btn.dataset.content;
+        const image = btn.dataset.image;
+
+        document.getElementById("newsModalLabel").innerText = title;
+        document.getElementById("newsModalContent").innerText = content;
+        document.getElementById("newsModalImage").src = image;
+
+        const modal = new bootstrap.Modal(document.getElementById("newsModal"));
+        modal.show();
+      }
+    });
+  </script>
+  <script>
+    async function loadGoogleMapsScript() {
+      try {
+        // 1. Fetch the API key from your backend endpoint
+        const response = await axios.get("http://localhost:3001/api/config");
+        const apiKey = response.data.googleMapsApiKey;
+
+        if (!apiKey) {
+          console.error("Google Maps API key not found in server config.");
+          return;
+        }
+
+        // 2. Create the script element
+        const script = document.createElement("script");
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+        script.defer = true;
+        document.head.appendChild(script);
+      } catch (error) {
+        console.error("Error fetching Google Maps API key:", error);
+      }
+    }
+
+ 
+    window.initMap = function () {
+      const map = new google.maps.Map(document.getElementById(""), {
+        center: { lat: 6.907080478109067, lng: 79.97862023751016 },
+        zoom: 15,
+      });
+
+      const marker = new google.maps.Marker({
+        position: { lat: 6.907080478109067, lng: 79.97862023751016 },
+        map: map,
+        title: "My Location",
+      });
+    };
+
+    loadGoogleMapsScript();
+  </script>
+</html>
