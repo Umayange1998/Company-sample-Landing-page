@@ -3,6 +3,11 @@ const app = express();
 const cors = require('cors');
 require('dotenv').config();
 
+app.use(cors({
+    origin: "https://company-sample-landing-page-umayange.netlify.app/", 
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+}));
 // Middleware
 app.use(express.json());
 app.use(cors());
