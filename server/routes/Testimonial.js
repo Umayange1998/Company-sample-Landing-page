@@ -1,17 +1,25 @@
-const express = require('express');
-const router = express.Router()
-const{Testimonial} = require("../models");
+const express = require("express");
+const router = express.Router();
+const Testimonial = require("../models/testimonial");
 
-router.get("/", async (req, res)=>{
-const listOfTestimonial = await Testimonial.findAll()
-res.json(listOfTestimonial);
-})
-
-router.post("/", async (req,res) =>{
-    const sTestimonial = req.body;
-    await Testimonial.create(sTestimonial);
-    res.json(sTestimonial);
+// GET all Testimonials
+router.get("/", async (req, res) => {
+  try {
+    const listOfTestimonials = await Testimonial.find();
+    res.json(listOfTestimonials);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
+// POST new Testimonial
+router.post("/", async (req, res) => {
+  try {
+    const sTestimonial = await Testimonial.create(req.body);
+    res.json(sTestimonial);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-module.exports = router
+module.exports = router;

@@ -1,14 +1,14 @@
-module.exports = (sequelize, DataTypes)=>{
-    const News = sequelize.define("News", {
-        image_url:{
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        content:{
-             type: DataTypes.TEXT,
-            allowNull: false,
-        }
+const mongoose = require("mongoose");
 
-    });
-    return News;
-}
+const NewsSchema = new mongoose.Schema({
+  image_url: {
+    type: String,
+    required: true,
+  },
+  content: {
+    type: String,
+    required: true,
+  }
+}, { timestamps: true });
+
+module.exports = mongoose.model("News", NewsSchema);

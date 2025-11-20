@@ -1,17 +1,25 @@
-const express = require('express');
-const router = express.Router()
-const{News} = require("../models");
+const express = require("express");
+const router = express.Router();
+const News = require("../models/news");
 
-router.get("/", async (req, res)=>{
-const listOfNews = await News.findAll()
-res.json(listOfNews);
-})
-
-router.post("/", async (req,res) =>{
-    const snews = req.body;
-    await News.create(snews);
-    res.json(snews);
+// GET all News
+router.get("/", async (req, res) => {
+  try {
+    const listOfNews = await News.find();
+    res.json(listOfNews);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 });
 
+// POST new News
+router.post("/", async (req, res) => {
+  try {
+    const snews = await News.create(req.body);
+    res.json(snews);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
 
-module.exports = router
+module.exports = router;
