@@ -1,0 +1,11 @@
+[phases.setup]
+commands = ["echo 'Installing Node...'"]
+
+[phases.build]
+commands = ["cd server && npm install"]
+
+[phases.start]
+commands = ["cd server && npm start"]
+
+[env]
+NODE_VERSION = "20"
