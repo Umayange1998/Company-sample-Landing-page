@@ -1,9 +1,17 @@
-pkgs = ["nodejs"] 
+# nixpacks.toml (Recommended Final Fix)
 
-commands = ["echo 'Node.js is now installed via pkgs!'"]
+# This line explicitly tells Nixpacks to run the Node.js detection and setup logic.
+providers = ["node"]
+
+[phases.setup]
+# Use "..." to merge the packages auto-detected by the 'node' provider 
+# with any custom packages you might add.
+pkgs = ["..."] 
+commands = ["echo 'Starting build after Node setup...'"]
 
 [phases.build]
-commands = ["cd server && npm install"]
+# If your package.json is in 'server', this is correct.
+commands = ["cd server && npm install"] 
 
 [phases.start]
 commands = ["cd server && npm start"]
