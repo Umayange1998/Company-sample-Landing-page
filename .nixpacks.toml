@@ -1,5 +1,6 @@
-[phases.setup]
-commands = ["echo 'Installing Node...'"]
+pkgs = ["nodejs"] 
+
+commands = ["echo 'Node.js is now installed via pkgs!'"]
 
 [phases.build]
 commands = ["cd server && npm install"]
