@@ -346,6 +346,9 @@
     </div>
   </body>
   <script>
+  const RAILWAY_URL = "https://company-sample-landing-page-production.up.railway.app";
+</script>
+  <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
   <script
@@ -383,7 +386,7 @@
   <script>
     async function loadTestimonial() {
       try {
-        const response = await axios.get("http://localhost:3001/testimonial");
+        const response = await axios.get(`${RAILWAY_URL}/testimonial`);
         const testimonial = response.data;
 
         const testimonialsiner = document.querySelector(".carousel-inner");
@@ -431,7 +434,7 @@
 
     async function loadNews() {
       try {
-        const response = await axios.get("http://localhost:3001/news");
+        const response = await axios.get(`${RAILWAY_URL}/news`);
         const news = response.data;
 
         const slidesContainer = document.getElementById("news-slides");
@@ -509,7 +512,7 @@
     async function loadGoogleMapsScript() {
       try {
         // 1. Fetch the API key from your backend endpoint
-        const response = await axios.get("http://localhost:3001/api/config");
+        const response = await axios.get(`${RAILWAY_URL}/api/config`);
         const apiKey = response.data.googleMapsApiKey;
 
         if (!apiKey) {
