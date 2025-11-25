@@ -62,3 +62,9 @@ Database: MySQL, Sequelize ORM
 HTTP Client: Axios
 
 Other: dotenv, CORS
+
+## 🔗 Live Demo
+
+<a href="https://company-sample-landing-page-umayange.netlify.app/" target="_blank" rel="noopener noreferrer">
+  Visit Live Website
+</a>
